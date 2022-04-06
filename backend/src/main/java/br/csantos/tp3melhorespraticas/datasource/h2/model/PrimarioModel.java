@@ -1,14 +1,12 @@
 package br.csantos.tp3melhorespraticas.datasource.h2.model;
 
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
+@Entity(name = "primario")
 public class PrimarioModel {
 
     @Id

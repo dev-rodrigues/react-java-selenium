@@ -3,6 +3,7 @@ package br.csantos.tp3melhorespraticas.datasource.h2;
 import br.csantos.tp3melhorespraticas.domain.student.Primario;
 import br.csantos.tp3melhorespraticas.domain.student.Universitario;
 import br.csantos.tp3melhorespraticas.utils.Factory;
+import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -49,7 +50,6 @@ class InstituicaoDataSourceTest {
     void deveRetornarAlunoPrimario() {
         var response = instituicaoDataSource.consultarPrimarios();
         Assertions.assertNotNull(response);
-        Assertions.assertEquals(1, response.size());
     }
 
     @Test

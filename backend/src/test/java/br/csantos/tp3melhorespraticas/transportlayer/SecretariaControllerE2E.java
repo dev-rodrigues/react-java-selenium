@@ -5,11 +5,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@Disabled("Teste de integração")
 public class SecretariaControllerE2E {
 
     private WebDriver driver;
@@ -49,7 +51,7 @@ public class SecretariaControllerE2E {
         driver.findElement(By.id("nascimento")).sendKeys("05-10-1994");
         driver.findElement(By.cssSelector(".chakra-button")).click();
 
-        Thread.sleep(2000);
+        Thread.sleep(4000);
 
         var newElements = driver.findElements(By.xpath(".//*[@id=\"matriculados\"]/tbody/tr"));
 
